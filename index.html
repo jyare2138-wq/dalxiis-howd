@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourism Booking App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">DreamTravel</div>
+        <nav>
+          <a href="#vip-premium" style="color: #f5b642; font-weight: 700;">👑 VIP</a>
+          <a href="#destinations">Meelo</a>
+          <a href="#booking">Book</a>
+          <a href="#bookings">Bookings</a>
+        </nav>
+        <button class="primary-btn small">Book Now</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="badge">🌍 Safar • Qurux • Jawi 🌍</span>
+            <h1>Saraf Qurux Badan Oo Xusuus Leh</h1>
+            <p>
+              Joojitaaga safarrada ugu quruxsan duunyada oo riyadada ah. Halkan ka dablo qorshe VIP ama Budget-friendly, oo leh hotelada ugu wanaagsan, guide expert, iyo khidmaadda degdeg oo amaan ah. Meel kasta oo qurux badan oo ay ku qiimo dhimis 50%!
+            </p>
+            <div class="hero-actions">
+              <a href="#vip-premium" class="primary-btn">Baadh VIP Qorsheyada</a>
+              <button id="vipButton" class="secondary-btn">Meelo Dhammaan</button>
+            </div>
+            <div class="stats">
+              <div>
+                <strong>12k+</strong>
+                <span>Socdaalayaal</span>
+              </div>
+              <div>
+                <strong>180+</strong>
+                <span>Meelo Qurux</span>
+              </div>
+              <div>
+                <strong>4.9/5</strong>
+                <span>Qiimeyn</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="mini-card">
+              <span>Safar la xushay</span>
+              <h3>Dubai Luxury Escape</h3>
+              <ul>
+                <li>🏨 3 Star Luxury Hotels</li>
+                <li>🏜️ Desert Safari Experience</li>
+                <li>🛍️ Premium Shopping Malls</li>
+                <li>🍽️ Fine Dining Restaurants</li>
+              </ul>
+              <div class="price-row">
+                <strong>$1,200</strong>
+                <span>Qofkii</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vip-premium" id="vip-premium">
+        <div class="container">
+          <div class="premium-header">
+            <span class="premium-badge">👑 VIP EXCLUSIVE</span>
+            <h2>Safar VIP Oo Qurux Badan</h2>
+            <p>Raadi safar walba oo qurux badan oo leh khidmaadda ugu fiican, hotelada premium, iyo tabarida personalized oo ay leedahay qofkii kale.</p>
+          </div>
+          <div class="vip-grid">
+            <div class="vip-card featured">
+              <div class="vip-header">
+                <span class="vip-badge">🌟 Most Popular</span>
+              </div>
+              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=500&q=80" alt="Dubai VIP" class="vip-image"/>
+              <div class="vip-content">
+                <h3>Dubai Luxury Escape</h3>
+                <p class="location">🏙️ UAE, Dubai</p>
+                <p class="description">Safar VIP oo kamalan leh 5-star luxury hotels, desert safari, gold souk shopping, iyo khidmaad VIP 24/7. Tabarida qofkiiba ah, mahadsanid wayn, iyo safar oo walaac la'an ah.</p>
+                <div class="vip-features">
+                  <div class="feature"><span class="icon">📅</span> 3 Maalmood</div>
+                  <div class="feature"><span class="icon">⭐</span> 4.9/5 Rating</div>
+                  <div class="feature"><span class="icon">👥</span> All Inclusive</div>
+                  <div class="feature"><span class="icon">🚗</span> Airport Pickup</div>
+                </div>
+                <div class="vip-price">
+                  <span class="price-label">Price per person:</span>
+                  <span class="price">$1,200</span>
+                  <span class="original-price">$1,500</span>
+                </div>
+                <button class="vip-book-btn" onclick="selectVIPDestination(1)">Book Now - VIP</button>
+              </div>
+            </div>
+
+            <div class="vip-card">
+              <div class="vip-header">
+                <span class="vip-badge">🌴 Paradise</span>
+              </div>
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Bali" class="vip-image"/>
+              <div class="vip-content">
+                <h3>Bali Luxury Retreat</h3>
+                <p class="location">🏝️ Indonesia, Bali</p>
+                <p class="description">Safar qurux badan oo leh xeebta wanaagsan, spas premium oo leh dhadhka asli, resort 5-star, iyo yoga ka hawl abuur. Jawi cadeedu muuqaalka ugu quruxsan duunyada!</p>
+                <div class="vip-features">
+                  <div class="feature"><span class="icon">📅</span> 4 Maalmood</div>
+                  <div class="feature"><span class="icon">⭐</span> 4.8/5 Rating</div>
+                  <div class="feature"><span class="icon">🏊</span> Beach Access</div>
+                  <div class="feature"><span class="icon">🍽️</span> Fine Dining</div>
+                </div>
+                <div class="vip-price">
+                  <span class="price-label">Price per person:</span>
+                  <span class="price">$950</span>
+                  <span class="original-price">$1,200</span>
+                </div>
+                <button class="vip-book-btn" onclick="selectVIPDestination(2)">Book Now - VIP</button>
+              </div>
+            </div>
+
+            <div class="vip-card">
+              <div class="vip-header">
+                <span class="vip-badge">🕌 Heritage</span>
+              </div>
+              <img src="https://images.unsplash.com/photo-1527838832700-5059252407fa?auto=format&fit=crop&w=500&q=80" alt="Istanbul" class="vip-image"/>
+              <div class="vip-content">
+                <h3>Istanbul Heritage Tour</h3>
+                <p class="location">🇹🇷 Turkey, Istanbul</p>
+                <p class="description">Safar taariikhiga ah oo leh guide qoraaloo ah, museum access, souks tradeeshional, halal cuisine, iyo safar xariir. Qoyska Osmani iyo dhaqanka Biladeecda Idaaceed!</p>
+                <div class="vip-features">
+                  <div class="feature"><span class="icon">📅</span> 5 Maalmood</div>
+                  <div class="feature"><span class="icon">⭐</span> 5.0/5 Rating</div>
+                  <div class="feature"><span class="icon">🎫</span> All Tickets</div>
+                  <div class="feature"><span class="icon">🍽️</span> Local Cuisine</div>
+                </div>
+                <div class="vip-price">
+                  <span class="price-label">Price per person:</span>
+                  <span class="price">$1,800</span>
+                  <span class="original-price">$2,200</span>
+                </div>
+                <button class="vip-book-btn" onclick="selectVIPDestination(4)">Book Now - VIP</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits-section">
+        <div class="container">
+          <div class="benefits-header">
+            <div class="dream-sticker">✈️ 🌍 🏝️ 😍</div>
+            <h2>What's Your Dream?</h2>
+            <p class="dream-subtitle">Safar Oo Wanaagsan • Meelo Oo Qurux Badan</p>
+          </div>
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="benefit-icon">✈️</div>
+              <h3>Safar Oo Samaan ah</h3>
+              <p>Nala balanqaad online ah, booking degdeg, iyo mahadsanid oo la hadalka ah si aad u tagto safarka oo walaac la'an ah.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">💰</div>
+              <h3>Qiimaha Ugu Wanaagsan</h3>
+              <p>VIP safar oo leh discount 20-30%, flexible payment, iyo hadiyad qofka ah oo ay leedahay qofkii kale.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">👨‍💼</div>
+              <h3>Tabarida 24/7</h3>
+              <p>Guide expert oo leh experience, tabarida qofkiiba ah, iyo emergency support markuu baahan yahay.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">🌍</div>
+              <h3>Safar Duunyada</h3>
+              <p>180+ meelo oo qurux badan, hotel premium, iyo experience oo caadi ah oo hodan duunyada.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">🛡️</div>
+              <h3>Garantiya Amaan</h3>
+              <p>Travel insurance, medical emergency, iyo warantiga money-back markuu dhacdo xaaska.</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">⭐</div>
+              <h3>Qiimaha Sare Oo Wanaagsan</h3>
+              <p>12k+ customers satisfied, 4.9/5 rating, iyo reviews oo positive oo 99% customer happiness.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="destinations" class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-tag">Caan ah</span>
+              <h2>Meelooyinka ugu fiican</h2>
+            </div>
+            <div class="filters" id="filters">
+              <button class="filter active" data-filter="all">Dhammaan</button>
+              <button class="filter" data-filter="100%">100%</button>
+              <button class="filter" data-filter="VIP 80%">VIP 80%</button>
+            </div>
+          </div>
+
+          <div id="destinationGrid" class="destination-grid"></div>
+        </div>
+      </section>
+
+      <section id="booking" class="section booking-section">
+        <div class="container booking-layout">
+          <div class="form-card">
+            <h2>Foomka Bookings</h2>
+            <form id="bookingForm">
+              <div class="two-col">
+                <label>
+                  Magaca oo buuxa
+                  <input type="text" id="fullName" placeholder="Magacaaga" required />
+                </label>
+                <label>
+                  Lambarka taleefanka
+                  <input type="tel" id="phone" placeholder="+252 61 ..." required />
+                </label>
+              </div>
+
+              <div class="two-col">
+                <label>
+                  Email
+                  <input type="email" id="email" placeholder="you@example.com" required />
+                </label>
+                <label>
+                  Taariikhda safarka
+                  <input type="date" id="travelDate" required />
+                </label>
+              </div>
+
+              <div class="two-col">
+                <label>
+                  Tirada booqataayaasha
+                  <input type="number" id="guests" min="1" max="10" value="2" required />
+                </label>
+                <label>
+                  Habka lacag bixinta
+                  <select id="paymentMethod" required>
+                    <option value="Card">Kaadh</option>
+                    <option value="Mobile Money">Mobile Money</option>
+                    <option value="Bank Transfer">Bank Transfer</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                Meesha la doortay
+                <input type="text" id="selectedDestinationDisplay" value="Dooro meelo" readonly />
+              </label>
+
+              <button type="submit" class="primary-btn submit-btn">Xaqiiji Booking</button>
+            </form>
+          </div>
+
+          <aside class="summary-card">
+            <h3>Jawaabta safarka</h3>
+            <div id="bookingSummary">
+              <p class="empty-state">Dooro meel si aad u aragto qiimaha safarka.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="bookings" class="section">
+        <div class="container">
+          <div class="section-head small-gap">
+            <div>
+              <span class="section-tag">Bookings</span>
+              <h2>Bookigs dhawaan</h2>
+            </div>
+          </div>
+
+          <div id="bookingList" class="booking-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <div style="font-weight: 700; margin-bottom: 4px;">DreamTravel © 2026</div>
+          <div style="font-size: 0.9rem;">✨ Safarrada ugu Quruxsan Duunyada ✨</div>
+        </div>
+        <div style="text-align: right;">
+          <div style="font-weight: 600; margin-bottom: 4px;">Nala Xiriir</div>
+          <div style="font-size: 0.9rem;">WhatsApp: +252 61 *** ****</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
